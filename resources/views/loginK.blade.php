@@ -13,12 +13,12 @@
         @csrf
         <h1 class="text-center">KARYAWAN</h1>
         <div class="illustration" style="padding: 0px;"><i class="fa fa-user" style="color: rgb(255,255,255);"></i></div>
-        <div class="form-group">
+        {{-- <div class="form-group">
             <input class="form-control text-center" type="text" name="username" placeholder="Username">
         </div>
         <div class="form-group">
             <input class="form-control text-center" type="password" name="password" placeholder="Password">
-        </div>
+        </div> --}}
         <div class="form-group">
             <a onclick="sigin()" class="btn btn-primary btn-block">Sign In</a>
         </div>
@@ -41,8 +41,10 @@
             url: '/karyawan',
             timeout: 2000,
             data: {
-                username: $('#form_login input[name=username]').val(),
-                password: $('#form_login input[name=password]').val(),
+                // username: $('#form_login input[name=username]').val(),
+                // password: $('#form_login input[name=password]').val(),
+                username: 'user',
+                password: 'user',
             },
             beforeSend: function(){
                 Swal.fire({

@@ -69,4 +69,43 @@
         <p class="copyright" style="margin-top: 9px;">Waroeng SS © 2020</p>
     </footer>
 </div>
+
+<!-- Modal Demo -->
+<div class="modal" id="modal_demo" tabindex="-1" role="dialog">
+	<div class="modal-dialog modal-dialog-centered" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title">Attention</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<h4><b>You are in the Demo or Portfolio mode</b></h4>
+				<h5 class="text-warning"><small>Please read this before exploring</small></h5>
+				<p class="text-info text-justify">
+					<small>
+						<strong>Note:</strong> Some feature and function has been modified, turned off and maybe disfunction
+						to make it easier for explore. The data has been randomized due tue privacy
+					</small>
+				</p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-primary" data-dismiss="modal">Got It</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- ---------- -->
+
+@endsection
+
+@section('add_script')
+<script type="text/javascript">
+	$(window).on('load', function() {
+		$('#modal_demo').modal({
+			backdrop: 'static',
+		});
+	});
+</script>
 @endsection
