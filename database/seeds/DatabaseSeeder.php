@@ -91,7 +91,7 @@ class DatabaseSeeder extends Seeder
                     'karyawan_id' => $id_karyawan.$i,
                     'worktime' => $worktime,
                     'overtime' => $overtime,
-                    'date' => '2020-' . ($bulan + 3) . '-' . $hari,
+                    'date' => '2020-' . ($bulan + 6) . '-' . $hari,
                 ]);
                 $presensi_id_count++;
             }
@@ -99,7 +99,7 @@ class DatabaseSeeder extends Seeder
                 DB::table('gaji')->insert([
                     'id' => date('hms').$gaji_id_count,
                     'karyawan_id' => $id_karyawan.$i,
-                    'period' => '2020-' . ($j + 3) . '-1',
+                    'period' => '2020-' . ($j + 6) . '-1',
                     // 'status' => $faker->numberBetween(0, 1),
                 ]);
                 $gaji_id_count++;
